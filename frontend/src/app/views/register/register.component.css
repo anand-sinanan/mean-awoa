@@ -1,0 +1,12 @@
+.register {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  /*height: 100vh;*/
+   background: linear-gradient(to bottom right, #52c1ea, #01ffe8);
+
+  color: white;
+}
+h2, a { color: white }
+.container {
+  padding: 40px;
+}

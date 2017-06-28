@@ -1,0 +1,45 @@
+<!-- Gallery! -->
+<div class="gallery">
+
+
+<!-- Becomes jumbotron component -->
+<section class="jumbotron text-center">
+     <div class="container">
+       <h1 class="jumbotron-heading">Welcome to the Gallery</h1>
+       <p class="lead">We hope you enjoy your stay, discover something awesome, and feel inspired to create.</p>
+       <p class="lead">
+         Only want below to show up for authenticated user, guests default to public images and have the option removed. Perhaps have another section entirely to deal with user image CRUD.
+       </p>
+       <p class="lead">Or maybe even have controls here to deal with filtering images?</p>
+       <p>
+         <a href="#" class="btn btn-primary">Shared</a>
+         <a href="#" class="btn btn-secondary">Personal</a>
+       </p>
+     </div>
+   </section>
+<!-- End jumbo -->
+
+   <div class="album text-muted">
+     <div class="container">
+
+
+       <!-- thumb component renders differently somehow, sticking to old way -->
+       <!-- <thumb [images]="images"></thumb> -->
+
+       <div class="row">
+
+         <ng-container *ngFor="let image of images; let i = first">
+         <div class="card card-inverse">
+           <a href="./app{{ image.path }}">
+           <img class="d-block img-fluid" src="./app{{ image.path }}" [attr.alt]="'Slide ' + index" >
+           </a>
+           <p class="card-text card-img-overlay">{{image.name}}</p>
+           <p class="card-text"> Controls here eg. (#) hearts (#) views, (#) downloads</p>
+         </div>
+       </ng-container>
+
+
+     </div>
+   </div>
+
+ </div>  <!--  end gallery -->

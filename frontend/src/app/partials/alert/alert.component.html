@@ -1,0 +1,8 @@
+<div *ngIf="message"
+[ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-info': message.type === 'info', 'alert-warning': message.type === 'warning', 'alert-danger': message.type === 'error' }"
+[@visibilityChanged]="visibility"
+(@visibilityChanged.done)="closeAlert($event)"
+>
+
+  {{message.text}}<a (click)="visibility = 'void'" class="close" aria-label="close">&times;</a>
+</div>

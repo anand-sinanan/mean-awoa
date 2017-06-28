@@ -1,0 +1,9 @@
+<div class="row" *ngFor="let image of images; let i = first">
+  <div class="card card-inverse">
+    <a href="./app{{ image.path }}">
+    <img class="d-block img-fluid" src="./app{{ image.path }}" [attr.alt]="'Slide ' + index" >
+    </a>
+    <p class="card-text card-img-overlay">{{image.name}}</p>
+    <p class="card-text"> Controls here eg. (#) hearts (#) views, (#) downloads</p>
+  </div>
+</div>

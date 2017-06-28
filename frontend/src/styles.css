@@ -1,0 +1,37 @@
+/* Master Styles */
+h1 {
+  color: #369;
+  font-family: 'Raleway',Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h3 {
+  color: #444;
+  font-family: 'Raleway',Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+}
+body {
+  margin: 0em;
+  min-height: 500px;
+}
+body, input[text], button {
+  color: #000;
+  font-size: 1.2rem;
+  font-family: 'Raleway',Cambria, Georgia;
+}
+/* . . . */
+/* everywhere else */
+* {
+  font-family: 'Raleway',Arial, Helvetica, sans-serif;
+}
+
+.form-control {
+  background: transparent;
+  border: 1px solid white;
+  color: #fff;
+}
+
+.help-block {
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}

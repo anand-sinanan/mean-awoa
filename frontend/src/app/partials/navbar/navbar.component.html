@@ -1,0 +1,109 @@
+<div class="mynav sticky-top">
+
+
+<div class="collapse message" id="navbarToggleExternalContent">
+  <div class="container">
+          <div class="row">
+            <div class="col-sm-8 py-4">
+              <h4 class="text-white"><b>A</b>mazing <b>W</b>orks <b>O</b>f <b>A</b>rt</h4>
+              <p class="text-white">Sure it's catchy from a marketing perspective, only here's what I actually believe to be true : we are all works of art, and my goal is to help you become an artist :)</p>
+              <p class="text-muted">(Click 'About' again to hide this)</p>
+            </div>
+            <div class="col-sm-4 py-4">
+              <h4 class="text-white"><b>Contact</b></h4>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                <li><a href="#" class="text-white">Email me</a></li>
+              </ul>
+            </div>
+          </div>
+  </div>
+
+</div>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
+
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <h1 class="navbar-brand mb-0" ><b>AWOA</b></h1>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+    <ul class="nav navbar-nav mr-auto">
+
+      <li *ngIf="loggedIn | async; else guestBlock" class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Welcome back, {{ (this.auth.hasToken()? this.currentUser.username:'Auth but no local storage')  }}!
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" routerLink="/images">My Images</a>
+          <a class="dropdown-item" (click)="logout()">Sign Out</a>
+        </div>
+      </li>
+      <ng-template #guestBlock>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle"  id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Welcome, guest!
+        </a>
+        <div class="dropdown-menu dropdown-menuz" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" routerLink="/login">Sign In</a>
+          <a class="dropdown-item" routerLink="/register">Sign Up</a>
+        </div>
+      </li>
+    </ng-template>
+
+  </ul>
+
+
+      <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li> -->
+        <li class ="nav-item"><a class="nav-link" routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+        <li class ="nav-item"><a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a></li>
+        <li class ="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+          About</a>
+        </li>
+        <li class ="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1" aria-expanded="false" aria-label="Toggle navigation">
+            Features</a>
+        </li>
+
+        </ul>
+        <form class="form-inline">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control ml-sm-2" type="text" placeholder="Image search coming soon!">
+
+        </form>
+
+
+
+
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> -->
+
+  </div>
+  <!-- Cute position on right side -->
+</nav>
+<div class="collapse message" id="navbarToggleExternalContent1">
+  <div class=" p-4">
+    <h4 class="text-white"><b>Content Delivery</b></h4>
+    <span class="text-white">
+          Need to think hard about this section being dynamic component. Sign In/Sign Up, Message board/Notices/Ads etc.
+      </span>
+  </div>
+</div>
+<alert></alert>
+</div>

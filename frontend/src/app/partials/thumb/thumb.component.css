@@ -1,0 +1,28 @@
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+.card > img {
+  margin-bottom: .75rem;
+  /* Consider doing this on hover, also might want to use bootstrap thumbnail vs card... */
+  /*box-shadow: 10px 10px 5px grey;*/
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+.card-img-overlay {
+    position: absolute;
+    top: inherit;
+    bottom:inherit;
+    left:inherit;
+    right:inherit;
+    background: rgba(0, 0, 0, 0.42);
+    padding: 1.25rem;
+}

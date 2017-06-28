@@ -1,0 +1,48 @@
+.gallery {
+  background:  linear-gradient(to bottom right, #6441A5, #2a0845);
+  color: whitesmoke;
+  height: 100vh;
+}
+
+/* Make this it's own component later */
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background: transparent;
+
+  color: whitesmoke;
+  border-radius: 0;
+}
+h1 { color: white; }
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+/* end jumbo */
+
+.album {
+  /*min-height: 50rem;  Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  color: white;
+}
+
+
+/*footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}*/

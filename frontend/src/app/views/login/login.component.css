@@ -1,0 +1,13 @@
+.login {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  /*height: 100vh;*/
+  /* background: linear-gradient(to bottom right, #52c1ea, #01ffe8); */
+	/* background:  linear-gradient(to bottom right, #6e00ff, #00fff7); */
+	background: linear-gradient(to bottom right, #00baff, #00d0bd);
+  color: white;
+}
+h2, a { color: white }
+.container {
+  padding: 40px;
+}

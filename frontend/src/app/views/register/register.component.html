@@ -1,0 +1,64 @@
+<div class="register">
+
+  <div class="col-md-6 col-md-offset-3 container">
+      <h2>Register</h2>
+      <form name="form" (ngSubmit)="form.valid && register()" [formGroup]="form" novalidate>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.firstName.errors,
+        'has-success': form.controls.firstName.valid
+      }">
+              <label for="firstName">First Name</label>*
+              <input type="text" class="form-control" name="firstName" formControlName="firstName" required />
+              <div *ngIf="form.controls.firstName.errors" class="help-block bg-danger">First Name is required</div>
+          </div>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.lastName.errors,
+        'has-success': form.controls.lastName.valid
+      }">
+              <label for="lastName">Last Name</label>*
+              <input type="text" class="form-control" name="lastName" formControlName="lastName" required />
+              <div *ngIf="form.controls.lastName.errors" class="help-block bg-danger">Last Name is required</div>
+          </div>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.username.errors,
+        'has-success': form.controls.username.valid
+      }">
+              <label for="username">Username</label>*
+              <input type="text" class="form-control" name="username" formControlName="username" required />
+              <div *ngIf="form.controls.username.errors" class="help-block bg-danger">Username is required</div>
+          </div>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.email.errors,
+        'has-success': form.controls.email.valid
+      }">
+              <label for="email">E-mail</label>
+              <input type="email" class="form-control" name="email" formControlName="email" required/>
+              <div *ngIf="form.controls.email.errors" class="help-block bg-danger">E-mail is required</div>
+          </div>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.password.errors,
+        'has-success': form.controls.password.valid
+      }">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" formControlName="password"  required />
+              <div *ngIf="form.controls.password.errors" class="help-block bg-danger">Password is required</div>
+          </div>
+          <div class="form-group" [ngClass]="{
+        'has-danger': form.controls.cpassword.errors,
+        'has-success': form.controls.cpassword.valid
+      }">
+              <label for="cpassword">Confirm Password</label>
+              <input type="password" class="form-control" name="cpassword" formControlName="cpassword"  required />
+              <div *ngIf="form.controls.cpassword.errors?.MatchPassword" class="help-block bg-danger">Password fields do not match</div>
+          </div>
+
+          <div class="form-group">
+              <button [disabled]="loading" class="btn btn-primary">Register</button>
+              <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+              <a [routerLink]="['/login']" class="btn btn-link">Cancel</a>
+          </div>
+      </form>
+  </div>
+<!-- <pre>{{form.value | json}}</pre> -->
+
+</div>
