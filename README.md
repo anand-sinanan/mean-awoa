@@ -13,7 +13,7 @@ So what does MEAN ...mean anyways?
 **A**ngular
 **N**ode
 
-Initial AWOA project is front end only. Leaving it stand-alone. Maybe you only care for messing around with bootstrap stuff. Either way going forward, the back end : MEAN, which assumes you got some kind of existing MongoDB set up.
+Initial AWOA project is front end only. Leaving it that way in case you're interested in the front-end Bootstrap stuff only. Also provides a good example of setting up "fake" back-end for testing/developing without a back-end. Either way going forward, the back end : MEAN, which assumes you got some kind of existing MongoDB set up.
 
 At the moment, only registered users can access the Images section. Do bear in mind that things are still under construction. (",)
 Sticky nav doesn't play nice with IE at the moment, feel free to change sticky class to anything you choose.
