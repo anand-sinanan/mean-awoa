@@ -33,7 +33,8 @@
       '@angular/http/testing': 'npm:@angular/http/bundles/http-testing.umd.js',
 
       //added for ng2-file-upload
-      'ng2-file-upload': 'npm:ng2-file-upload/bundles/ng2-file-upload.umd.js',
+      //'ng2-file-upload': 'npm:ng2-file-upload/bundles/ng2-file-upload.umd.js',
+      'ng2-file-upload': 'npm:ng2-file-upload',
 
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
@@ -54,7 +55,13 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      /** Configuration for ng2-file-upload */
+      'ng2-file-upload' : {
+        main: './ng2-file-upload.js',
+        defaultExtension: 'js'
       }
+      /**End configuration for ng2-file-upload */
     }
   });
 })(this);
