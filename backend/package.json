@@ -13,7 +13,7 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-mongo-crud": "^1.2.3",
-    "mongoose": "^4.9.1",
+    "mongoose": "^5.7.5",
     "morgan": "^1.6.1",
     "passport": "^0.2.1",
     "passport-local": "^1.0.0",
